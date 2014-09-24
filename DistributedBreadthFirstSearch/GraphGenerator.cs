@@ -26,13 +26,12 @@ namespace DistributedBreadthFirstSearch
         {
             Smrf.NodeXL.GraphDataProviders.Facebook.FacebookGraphDataProvider fbGraph = new Smrf.NodeXL.GraphDataProviders.Facebook.FacebookGraphDataProvider();
             string data = "";
+            GraphGenerator graph = new GraphGenerator();
+
+            fbGraph.TryGetGraphData(out data);
 
             Console.WriteLine(data);
-        }
 
-        private void getFacebookData(string data, FacebookGraphDataProvider fbGraph)
-        {
-            fbGraph.TryGetGraphData(out data);
         }
     }
 }
